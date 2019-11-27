@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Detail{% endblock %}
+
+{% block content %}
+<h1 class="text-center text-info mb-4">{{post.title}}</h1>
+<div class="container mb-5 ">
+    {{post.content}} 
+    <h3 class="float-right pt-4 text-success">posted by {{post.author}}</h3>
+</div>
+
+<div class=" container ">
+        <img class="img-fluid" src="{{url_for('static',filename = 'imgs/'+post.image)}}" width="600px">
+</div>
+{% endblock %}

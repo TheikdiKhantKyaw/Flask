@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1 class="text-center text-info my-5">Register to be a member</h1>
+    <div class="col-md-6 offset-md-3">
+            <form method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="name"placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="row justify-content-between">
+                      <a class="text-muted" href="{{url_for('login')}}">Already a member? Please click here to log in!</a>
+                      <button type="submit" class="btn btn-primary btn-sm ">Register</button>
+                    </div>
+                  </form>
+    </div>
+</div>
+{% endblock %}
